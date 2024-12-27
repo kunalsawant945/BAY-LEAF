@@ -1,0 +1,77 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat;
+    background-size: cover; /* Ensure the image covers the header */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text horizontally */
+    text-align: center; /* Center-align the text */
+    gap: 1vw;
+    width: 80%; /* Adjust to ensure it doesn't overflow */
+    padding: 2vw;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust position to the center */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    border-radius: 15px; /* Matches the header border radius */
+    color: white; /* White text for visibility */
+    animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+    font-weight: 600;
+    color: #ffffff; /* Pure white for the heading */
+    font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+    color: #e0e0e0; /* Slightly lighter white for contrast */
+    font-size: 1.2vw;
+    line-height: 1.5; /* Improve readability */
+}
+
+.header-contents button {
+    border: none;
+    color: #ffffff; /* Button text in white */
+    font-weight: 500;
+    padding: 1vw 2.5vw;
+    background: #ff5722; /* Bright color to make the button stand out */
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.header-contents button:hover {
+    background: #e64a19; /* Slightly darker on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1050px) {
+    .header {
+        height: 38vw;
+    }
+    .header-contents {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        width: 95%;
+    }
+    .header-contents p {
+        display: none;
+    }
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
